@@ -8,32 +8,21 @@
 	<link rel="stylesheet" href="css/main.css" />
 	
 	<style>
-		.navbar-brand {
-			color: rgba(255, 255, 255, 1)!important;
-			font-weight: 100;
-			font-size: 3em;
-			font-family: "Gill Sans";
-		}
-		/*img {
-			display: block;
-			height: auto;
-			width: 100%;
-		}*/
 		div.col-sm-4 {
 			padding-left: 0px;
 			padding-right: 0px;
 		}
-		.nav.navbar-nav {
-			float: right;
-		}
-		.sm-caps {
-			font-variant: small-caps;
-		}
-		/*img.image_picker_image {
-			width: 50%!important;
-		}*/
-		li {
+		ul.thumbnails li {
 			width: 25%;
+		}
+		.row.middle {
+			margin: 0 auto;
+		}
+		.pad-down {
+			padding-top: 100px;
+		}
+		div.row.bottom {
+			margin-top: 30px;
 		}
 	</style>
 	
@@ -55,30 +44,38 @@
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav sm-caps">
 					<li class="active">
-						<a href="checkbox.html">chequebox test</a>
+						<a href="results.html">results</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid">
-		<div class="row">
-			<select class="image-picker limit_callback" id="container" data-limit="2" multiple="multiple">
-			  <option data-img-src='images/catOne.jpg' value='1'>Cute Kitten 1</option>
-	          <option data-img-src='images/catTwo.jpg' value='2'>Cute Kitten 2</option>
-	          <option data-img-src='images/catThree.jpg' value='3'>Cute Kitten 3</option>
-	          <option data-img-src='images/catFour.jpg' value='4'>Cute Kitten 4</option>
-	          <option data-img-src='images/catFive.jpg' value='5'>Cute Kitten 5</option>
-	          <option data-img-src='images/catSix.jpg' value='6'>Cute Kitten 6</option>
-			</select>
-		</div>
-	</div>
-		
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-12">
-				<form action="process.php" role="form" method="post">
+		
+	<div class="container-fluid pad-down">
+		<!--<div class="row middle">
+			<div class="col-sm-9 col-sm-offset-2">
+				<select class="image-picker limit_callback" id="container" data-limit="4" multiple="multiple" name="picSelect" >
+				  <option data-img-src='images/catOne.jpg' value='1'>Cute Kitten 1</option>
+			      <option data-img-src='images/catTwo.jpg' value='2'>Cute Kitten 2</option>
+			      <option data-img-src='images/catThree.jpg' value='3'>Cute Kitten 3</option>
+			      <option data-img-src='images/catFour.jpg' value='4'>Cute Kitten 4</option>
+			      <option data-img-src='images/catFive.jpg' value='5'>Cute Kitten 5</option>
+			      <option data-img-src='images/catSix.jpg' value='6'>Cute Kitten 6</option>
+				</select>
+			</div>
+		</div>-->
+		<div class="row bottom">
+			<div class="col-sm-7 col-sm-offset-2">
+				<form action="process.php" role="form" method="post" id="picSubmission">
+					<select class="image-picker limit_callback" id="container" data-limit="4" multiple="multiple" name="picSelect[]" >
+					  <option data-img-src='images/catOne.jpg' value='1'>Cute Kitten 1</option>
+					  <option data-img-src='images/catTwo.jpg' value='2'>Cute Kitten 2</option>
+					  <option data-img-src='images/catThree.jpg' value='3'>Cute Kitten 3</option>
+					  <option data-img-src='images/catFour.jpg' value='4'>Cute Kitten 4</option>
+					  <option data-img-src='images/catFive.jpg' value='5'>Cute Kitten 5</option>
+					  <option data-img-src='images/catSix.jpg' value='6'>Cute Kitten 6</option>
+					</select>
 					<div class="form-group">
 						<label for="inputEmail">Email Address</label>
 						<input type="email" class="form-control" id="inputEmail" placeholder="Enter Email" name="email" />
