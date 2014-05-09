@@ -3,7 +3,8 @@
 <html>
 <head>
 	<title>Sorter</title>
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="image-picker.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	
 	<style>
@@ -13,11 +14,11 @@
 			font-size: 3em;
 			font-family: "Gill Sans";
 		}
-		img {
+		/*img {
 			display: block;
 			height: auto;
 			width: 100%;
-		}
+		}*/
 		div.col-sm-4 {
 			padding-left: 0px;
 			padding-right: 0px;
@@ -27,6 +28,12 @@
 		}
 		.sm-caps {
 			font-variant: small-caps;
+		}
+		/*img.image_picker_image {
+			width: 50%!important;
+		}*/
+		li {
+			width: 25%;
 		}
 	</style>
 	
@@ -56,27 +63,19 @@
 	</div>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-4">
-				<img src="images/catOne.jpg" alt="cat" />
-			</div>
-			<div class="col-sm-4">
-				<img src="images/catTwo.jpg" alt="catcat" />
-			</div>
-			<div class="col-sm-4">
-				<img src="images/catThree.jpg" alt="catcatcat" />
-			</div>
+			<select class="image-picker limit_callback" id="container" data-limit="2" multiple="multiple">
+			  <option data-img-src='images/catOne.jpg' value='1'>Cute Kitten 1</option>
+	          <option data-img-src='images/catTwo.jpg' value='2'>Cute Kitten 2</option>
+	          <option data-img-src='images/catThree.jpg' value='3'>Cute Kitten 3</option>
+	          <option data-img-src='images/catFour.jpg' value='4'>Cute Kitten 4</option>
+	          <option data-img-src='images/catFive.jpg' value='5'>Cute Kitten 5</option>
+	          <option data-img-src='images/catSix.jpg' value='6'>Cute Kitten 6</option>
+			</select>
 		</div>
-		<div class="row">
-			<div class="col-sm-4">
-				<img src="images/catFour.jpg" alt="meow?" />
-			</div>
-			<div class="col-sm-4">
-				<img src="images/catFive.jpg" alt="meow?" />
-			</div>
-			<div class="col-sm-4">
-				<img src="images/catSix.jpg" alt="meow?" />
-			</div>
-		</div>
+	</div>
+		
+
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12">
 				<form action="process.php" role="form" method="post">
@@ -89,8 +88,15 @@
 			</div>
 		</div>
 	</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="image-picker.min.js" type="text/javascript"></script>
 
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<script>
+	$("select").imagepicker();
+	$("select").imagepicker({limit_reached: function(){alert('You may only select 10 images')}});
+</script>
 </body>
 
 </html>
