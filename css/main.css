@@ -11,7 +11,9 @@ a:visited {
 	font-variant: small-caps;
 }
 /* Navbar Customization */
-
+.navbar.navbar-inverse {
+	border-bottom: none;
+}
 .navbar-brand {
 	color: rgba(255, 255, 255, 1)!important;
 	font-weight: 100;
@@ -31,3 +33,12 @@ a:visited {
 			padding-bottom: 10px;
 			margin-top: 6px;
 		}
+		
+/* Main Container */
+
+.pad-down {
+	padding-top: 100px;
+}
+	.pad-down-sm {
+		padding-top: 50px;
+	}
