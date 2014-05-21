@@ -107,17 +107,35 @@
 			</div>
 			<div class="col-sm-4">
 				<img src="images/catFive.jpg" alt="meow?" />
-				<h4>Orange Kitty &#150 <?php 
+				<h4>Necklace Kitty &#150 <?php 
 					echo implode($picResults[4]);
 				 ?>
 				</h4>
 			</div>
 			<div class="col-sm-4">
 				<img src="images/catSix.jpg" alt="meow?" />
-				<h4>Orange Kitty &#150 <?php 
+				<h4>Albino-Mose Kitty &#150 <?php 
 					echo implode($picResults[5]);
 				 ?>
 				</h4>
+			</div>
+			<div class="col-sm-4">
+				<img src="images/catSeven.jpg" alt="meowmeow?" />
+				<h4>Bread Kitty &#150 <?php 
+					echo implode($picResults[6]);
+				 ?></h4>
+			</div>
+			<div class="col-sm-4">
+				<img src="images/catEight.jpg" alt="meowmeow?" />
+				<h4>Fierce Kitty &#150 <?php 
+					echo implode($picResults[7]);
+				 ?></h4>
+			</div>
+			<div class="col-sm-4">
+				<img src="images/catNine.jpg" alt="Sir meowmeow?" />
+				<h4>Book Kitty &#150 <?php 
+					echo implode($picResults[8]);
+				 ?></h4>
 			</div>
 		</div>
 		<div class="row">
