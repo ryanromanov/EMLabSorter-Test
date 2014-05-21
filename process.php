@@ -9,18 +9,20 @@ if (mysqli_connect_errno($con)) {
 $email = mysqli_real_escape_string($con, $_POST['email']);
 	$dupes = "SELECT * FROM emailCheck WHERE Email='$email'";
 	$picSelect = $_POST['picSelect'];
-	foreach ($picSelect as $a) {
-		$ballot = "UPDATE pictureVotes SET Votes = Votes+1 WHERE ID = '$a'";
-		$countBallot = mysqli_query($con, $ballot);
-		echo $a . "\n";
-	}
+	
 	$result = mysqli_query($con, $dupes);
 	if (mysqli_num_rows($result) > 0) {
+		die('Error: ' . mysqli_error($con));
 		echo "Some imposter has already voted with your email.";
+		
 		
 	} else {
 	
-		
+		foreach ($picSelect as $a) {
+			$ballot = "UPDATE pictureVotes SET Votes = Votes+1 WHERE ID = '$a'";
+			$countBallot = mysqli_query($con, $ballot);
+			echo $a . "\n";
+		}
 		//echo($picSelect);
 		$sql="INSERT INTO emailCheck (Email)
 		VALUES ('$email')";
