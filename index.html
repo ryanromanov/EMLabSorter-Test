@@ -13,7 +13,7 @@
 			padding-right: 0px;
 		}
 		ul.thumbnails li {
-			width: 25%;
+			width: 30%;
 		}
 		.row.middle {
 			margin: 0 auto;
@@ -21,6 +21,9 @@
 		
 		div.row.bottom {
 			margin-top: 30px;
+		}
+		div.col-sm-10.col-sm-offset-1.push-left {
+			margin-left: 12%;
 		}
 	</style>
 	
@@ -52,7 +55,7 @@
 		
 	<div class="container-fluid pad-down">
 		<div class="row bottom">
-			<div class="col-sm-7 col-sm-offset-2">
+			<div class="col-sm-10 col-sm-offset-1 push-left">
 				<form action="process.php" role="form" method="post" id="picSubmission">
 					<select class="image-picker limit_callback" id="container" data-limit="10" multiple="multiple" name="picSelect[]" >
 					  <option data-img-src="images/catOne.jpg" value='1'>Cute Kitten 1</option>
