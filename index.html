@@ -1,19 +1,20 @@
-
 <!doctype html>
 <html>
 <head>
+	<meta charset="UTF-8" />
 	<title>Sorter</title>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="image-picker.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	
 	<style>
+		
 		div.col-sm-4 {
 			padding-left: 0px;
 			padding-right: 0px;
 		}
 		ul.thumbnails li {
-			width: 30%;
+			width: 31%;
 		}
 		.row.middle {
 			margin: 0 auto;
@@ -23,9 +24,33 @@
 			margin-top: 30px;
 		}
 		div.col-sm-10.col-sm-offset-1.push-left {
-			margin-left: 12%;
+			margin-left: 10%;
 		}
 		li div.thumbnail {
+			border-radius: 0px;
+			border-color: rgba(120, 120, 120, .75);
+		}
+			li div.thumbnail p,
+			.jumbotron h4 {
+				font-weight: 300;
+			}
+		
+		.jumbotron h4 {
+			font-size: 1.3em;
+			text-align: center;
+		}
+		.push-down {
+			margin-top: 50px;
+		}
+		.push-up {
+			margin-bottom: 30px;
+		}
+		@media (max-width: 767px) {
+			div.col-sm-10.col-sm-offset-1.push-left {
+				margin-left: 6% !important;
+			}
+		}
+		button.btn.btn-default {
 			border-radius: 0px;
 		}
 	</style>
@@ -46,7 +71,7 @@
 				<a class="navbar-brand" href="index.html">UPCI <span class="sm-caps">photo contest</span></a>
 			</div>
 			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav sm-caps">
+				<ul class="nav navbar-nav">
 					<li class="active">
 						<a href="results.php">results</a>
 					</li>
@@ -54,12 +79,15 @@
 			</div>
 		</div>
 	</div>
-
-		
-	<div class="container-fluid pad-down">
+	<div class="jumbotron push-down">
+		<h4>
+		Select up to 10 images for submission to UPCI
+		</h4>
+	</div>		
+	<div class="container-fluid push-up">
 		<div class="row bottom">
 			<div class="col-sm-10 col-sm-offset-1 push-left">
-				<form action="process.php" role="form" method="post" id="picSubmission">
+				<form action="process.php" role="form" method="post" id="picSubmission" name="emailSubmit">
 					<select class="image-picker limit_callback" id="container" data-limit="10" multiple="multiple" name="picSelect[]" >
 					  <option data-img-src="images/catOne.jpg" value='1'>Orange Kitty</option>
 					  <option data-img-src="images/catTwo.jpg" value='2'>Grey Kitty</option>
@@ -90,6 +118,15 @@
 	$("select").imagepicker({
 		limit_reached: function(){alert('You may only select 10 images')},
 		show_label : true
+	});
+	
+	
+	$("#picSubmission").submit( function validateForm() {
+			var x=document.forms["emailSubmit"].value;
+			if (x==null || x=="") {
+				alert("Please enter an email");
+				return false;
+			}
 	});
 </script>
 </body>

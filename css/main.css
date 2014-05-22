@@ -6,10 +6,10 @@ a:link {
 a:visited {
 	background-color: rgba(35, 35, 35, 1) !important;
 }
-
 .sm-caps {
 	font-variant: small-caps;
 }
+
 /* Navbar Customization */
 .navbar.navbar-inverse {
 	border-bottom: none;
@@ -23,17 +23,25 @@ a:visited {
 	.nav.navbar-nav {
 		float: right;
 	}
-		div.collapse li a {
+		div.collapse li a,
+		div.collapsing li a {
 			font-variant: normal;
 			font-weight: 100;
 			font-size: 1.3em;
 			font-family: "Helvetica Neue";
+		}
+		div.collapsing li a,
+		div.navbar-collapse.collapse.in li a {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-top: 0px;
+		}
+		div.collapse li a {
 			border-left: 1px solid rgba(255, 255, 255, .75);
 			padding-top: 10px;
 			padding-bottom: 10px;
 			margin-top: 6px;
 		}
-		
 /* Main Container */
 
 .pad-down {

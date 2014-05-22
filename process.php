@@ -1,11 +1,14 @@
 <?php
-header( "Refresh:3; url=http://localhost/EMLabSorter-Test/results.php", true, 303);
+header( "Refresh:2; url=http://localhost/EMLabSorter-Test/results.php", true, 303);
 $con=mysqli_connect("localhost","root", "passw0rd", "cbiTest");
  //Check Connection
 if (mysqli_connect_errno($con)) {
 	echo mysqli_connect_error() . "Connection Failed! You've made a huge mistake..."; 
 }
-
+if ($_POST['email']==null || $_POST['email']=="") {
+	die("YOU MUST ENTER A REAL EMAIL");
+	return false;
+}
 $email = mysqli_real_escape_string($con, $_POST['email']);
 	$dupes = "SELECT * FROM emailCheck WHERE Email='$email'";
 	$picSelect = $_POST['picSelect'];
