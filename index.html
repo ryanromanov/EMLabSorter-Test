@@ -87,7 +87,7 @@
 	<div class="container-fluid push-up">
 		<div class="row bottom">
 			<div class="col-sm-10 col-sm-offset-1 push-left">
-				<form action="process.php" role="form" method="post" id="picSubmission" name="emailSubmit">
+				<form action="process.php" role="form" method="post" id="picSubmission" name="emailSubmit" onsubmit="return validateEmail()">
 					<select class="image-picker limit_callback" id="container" data-limit="10" multiple="multiple" name="picSelect[]" >
 					  <option data-img-src="images/catOne.jpg" value='1'>Orange Kitty</option>
 					  <option data-img-src="images/catTwo.jpg" value='2'>Grey Kitty</option>
@@ -120,14 +120,13 @@
 		show_label : true
 	});
 	
-	
-	$("#picSubmission").submit( function validateForm() {
-			var x=document.forms["emailSubmit"].value;
-			if (x==null || x=="") {
-				alert("Please enter an email");
-				return false;
-			}
-	});
+	function validateEmail() {
+		var x=document.forms["emailSubmit"]["email"].value;
+		if (x==null || x=="") {
+			alert("Ex nihilo nihil fit. We need your email address to continue.");
+			return false;
+		}
+	}
 </script>
 </body>
 
