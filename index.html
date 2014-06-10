@@ -41,6 +41,7 @@
 		}
 		.push-down {
 			margin-top: 50px;
+			margin-bottom: 10px;
 		}
 		.push-up {
 			margin-bottom: 30px;
@@ -89,7 +90,7 @@
 			<div class="col-sm-10 col-sm-offset-1 push-left">
 				<form action="process.php" role="form" method="post" id="picSubmission" name="emailSubmit" onsubmit="return validateEmail()">
 					<select class="image-picker limit_callback" id="container" data-limit="10" multiple="multiple" name="picSelect[]" >
-					  <option data-img-src="images/catOne.jpg" value='1'>Orange Kitty</option>
+					  <option data-img-src="images/catOne.jpg" value='1'><h4>Orange Kitty by CatzRuz</h4></option>
 					  <option data-img-src="images/catTwo.jpg" value='2'>Grey Kitty</option>
 					  <option data-img-src='images/catThree.jpg' value='3'>Tabby-in-da-box</option>
 					  <option data-img-src='images/catFour.jpg' value='4'>Me So Happy Kitty</option>
@@ -108,7 +109,7 @@
 			</div>
 		</div>
 	</div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="image-picker.min.js" type="text/javascript"></script>
 
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -126,7 +127,24 @@
 			alert("Ex nihilo nihil fit. We need your email address to continue.");
 			return false;
 		}
-	}
+	};
+	$(document).ready(function() {
+			var $cats = [ 
+				"<p class='descrip'>With pretty stories for which there's little good evidence as a patch of light made in the interiors of collapsing stars, corpus callosum rogue. Extraordinary claims require extraordinary evidence tesseract.</p>",
+				"<p class='descrip'>Bits of moving fluff white dwarf Jean-François Champollion ship of the imagination muse about explorations, globular star cluster science hydrogen atoms stirred by starlight, colonies star stuff harvesting star light Euclid permanence of the stars, finite but unbounded.</p>",
+				"<p class='descrip'>Across the centuries with pretty stories for which there's little good evidence not a sunrise but a galaxyrise encyclopaedia galactica extraplanetary billions upon billions the only home we've ever known! Cosmos vanquish the impossible muse about birth a very small stage in a vast cosmic arena!</p>",
+				"<p class='descrip'>Billions upon billions, descended from astronomers decipherment, Vangelis concept of the number one from which we spring dispassionate extraterrestrial observer rich in mystery billions upon billions circumnavigated astonishment not a sunrise but a galaxyrise laws of physics corpus callosum laws of physics paroxysm of global death from which we spring!</p>",
+				"<p class='descrip'>Hypatia the ash of stellar alchemy Sea of Tranquility tesseract a very small stage in a vast cosmic arena extraplanetary, tesseract astonishment are creatures of the cosmos. Orion's sword radio telescope citizens of distant epochs two ghostly white figures in coveralls and helmets are soflty dancing a mote of dust suspended in a sunbeam, paroxysm of global death.</p>",
+				"<p class='descrip'>Two ghostly white figures in coveralls and helmets are soflty dancing rogue birth intelligent beings the sky calls to us vastness is bearable only through love. Bits of moving fluff Drake Equation extraordinary claims require extraordinary evidence citizens of distant epochs, quasar cosmos? Made in the interiors of collapsing stars rings of Uranus Drake Equation hundreds of thousands? Orion's sword tingling of the spine?</p>",
+				"<p class='descrip'>Circumnavigated? White dwarf Drake Equation laws of physics finite but unbounded corpus callosum rings of Uranus rogue muse about cosmic fugue take root and flourish, a still more glorious dawn awaits? Hydrogen atoms galaxies courage of our questions! Science galaxies ship of the imagination, trillion.</p>",
+				"<p class='descrip'>Consciousness, descended from astronomers? Vanquish the impossible great turbulent clouds concept of the number one of brilliant syntheses! The ash of stellar alchemy, rings of Uranus Hypatia from which we spring tingling of the spine. Explorations the carbon in our apple pies. Trillion.</p>",
+				"<p class='descrip'>Radio telescope permanence of the stars a still more glorious dawn awaits galaxies bits of moving fluff the sky calls to us, of brilliant syntheses consciousness shores of the cosmic ocean something incredible is waiting to be known rich in mystery are creatures of the cosmos circumnavigated, galaxies birth, vastness is bearable only through love preserve and cherish that pale blue dot Jean-François Champollion!</p>",
+				"<p class='descrip'>The ash of stellar alchemy rich in mystery star stuff harvesting star light decipherment? Circumnavigated Jean-François Champollion! Sea of Tranquility cosmic ocean made in the interiors of collapsing stars Euclid! Explorations and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>"
+			];
+			$("ul.thumbnails li").each(function(i) {
+				$(this).find("div").append($cats[i]);
+			});
+	});
 </script>
 </body>
 
