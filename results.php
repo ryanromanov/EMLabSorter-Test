@@ -34,9 +34,9 @@
 			height: auto;
 			width: 100%;
 		}
-		div.col-sm-4 {
-			padding-left: 0px;
-			padding-right: 0px;
+		div.col-sm-6 {
+			padding-left: 1px;
+			padding-right: 1px;
 		}
 		.nav.navbar-nav {
 			float: right;
@@ -46,6 +46,14 @@
 			font-weight: 300;
 			font-family: "Hevetica Neue";
 			margin-top: 5px;
+		}
+		img.author {
+			width: 40%;
+			display: inline;
+			float: right;
+		}
+		span.author {
+			margin-top: -10px;
 		}
 	</style>
 	
@@ -75,67 +83,172 @@
 	</div>
 	<div class="container-fluid pad-down-sm">
 		<div class="row">
-			<div class="col-sm-4">
-				<img src="images/catOne.jpg" alt="cat" />
-				<h4>Orange Kitty &#150 <?php 
-					echo implode($picResults[0]);
-				 ?>
-				</h4>
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="images/catOne.jpg" alt="cat" />
+						<h4>Orange Kitty &#150 <?php 
+							echo implode($picResults[0]);
+						 ?>	</h4>
+					</div>
+					<div class="col-sm-3">
+						<span class="author">oppenheimer alksjdflajsdlfajsdlfkjasldfkjalskd
+						</span>
+						
+					</div>
+					<div class="col-sm-3">
+						<img class="author" src="images/authors/oppenheimer.jpg" alt="oppenheimer" />
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-4">
-				<img src="images/catTwo.jpg" alt="catcat" />
-				<h4>Grey Kitty &#150 <?php 
-					echo implode($picResults[1]);
-				 ?>
-				</h4>
-			</div>
-			<div class="col-sm-4">
-				<img src="images/catThree.jpg" alt="catcatcat" />
-				<h4>Tabby-in-da-box &#150 <?php 
-					echo implode($picResults[2]);
-				 ?>
-				</h4>
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="images/catTwo.jpg" alt="catcat" />
+						<h4>Grey Kitty &#150 <?php 
+							echo implode($picResults[1]);
+						 ?>
+						</h4>
+					</div>
+					<div class="col-sm-3">
+						<span class="author">oppenheimer alksjdflajsdlfajsdlfkjasldfkjalskd
+						</span>
+						
+					</div>
+					<div class="col-sm-3">
+						<img class="author" src="images/authors/oppenheimer.jpg" alt="oppenheimer" />
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-4">
-				<img src="images/catFour.jpg" alt="meow?" />
-				<h4>Me So Happy Kitty &#150 <?php 
-					echo implode($picResults[3]);
-				 ?>
-				</h4>
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="images/catThree.jpg" alt="catcatcat" />
+						<h4>Tabby-in-da-box &#150 <?php 
+							echo implode($picResults[2]);
+						 ?>
+						</h4>
+					</div>
+					<div class="col-sm-3">
+						<span class="author">oppenheimer alksjdflajsdlfajsdlfkjasldfkjalskd
+						</span>
+						
+					</div>
+					<div class="col-sm-3">
+						<img class="author" src="images/authors/oppenheimer.jpg" alt="oppenheimer" />
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-4">
-				<img src="images/catFive.jpg" alt="meow?" />
-				<h4>Necklace Kitty &#150 <?php 
-					echo implode($picResults[4]);
-				 ?>
-				</h4>
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="images/catFour.jpg" alt="meow?" />
+						<h4>Me So Happy Kitty &#150 <?php 
+							echo implode($picResults[3]);
+						 ?>
+						</h4>
+					</div>
+					<div class="col-sm-3">
+						<span class="author">oppenheimer alksjdflajsdlfajsdlfkjasldfkjalskd
+						</span>
+						
+					</div>
+					<div class="col-sm-3">
+						<img class="author" src="images/authors/oppenheimer.jpg" alt="oppenheimer" />
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-4">
-				<img src="images/catSix.jpg" alt="meow?" />
-				<h4>Albino-Mose Kitty &#150 <?php 
-					echo implode($picResults[5]);
-				 ?>
-				</h4>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="images/catFive.jpg" alt="meow?" />
+						<h4>Necklace Kitty &#150 <?php 
+							echo implode($picResults[4]);
+						 ?>
+						</h4>
+					</div>
+					<div class="col-sm-3">
+						<span class="author">oppenheimer alksjdflajsdlfajsdlfkjasldfkjalskd
+						</span>
+						
+					</div>
+					<div class="col-sm-3">
+						<img class="author" src="images/authors/oppenheimer.jpg" alt="oppenheimer" />
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-4">
-				<img src="images/catSeven.jpg" alt="meowmeow?" />
-				<h4>Bread Kitty &#150 <?php 
-					echo implode($picResults[6]);
-				 ?></h4>
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="images/catSix.jpg" alt="meow?" />
+						<h4>Albino-Mose Kitty &#150 <?php 
+							echo implode($picResults[5]);
+						 ?>
+						</h4>
+					</div>
+					<div class="col-sm-3">
+						<span class="author">oppenheimer alksjdflajsdlfajsdlfkjasldfkjalskd
+						</span>
+						
+					</div>
+					<div class="col-sm-3">
+						<img class="author" src="images/authors/oppenheimer.jpg" alt="oppenheimer" />
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-4">
-				<img src="images/catEight.jpg" alt="meowmeow?" />
-				<h4>Fierce Kitty &#150 <?php 
-					echo implode($picResults[7]);
-				 ?></h4>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="images/catSeven.jpg" alt="meowmeow?" />
+						<h4>Bread Kitty &#150 <?php 
+							echo implode($picResults[6]);
+						 ?></h4>
+					</div>
+					<div class="col-sm-3">
+						<span class="author">oppenheimer alksjdflajsdlfajsdlfkjasldfkjalskd
+						</span>
+						
+					</div>
+					<div class="col-sm-3">
+						<img class="author" src="images/authors/oppenheimer.jpg" alt="oppenheimer" />
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-4">
-				<img src="images/catNine.jpg" alt="Sir meowmeow?" />
-				<h4>Book Kitty &#150 <?php 
-					echo implode($picResults[8]);
-				 ?></h4>
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="images/catEight.jpg" alt="meowmeow?" />
+						<h4>Fierce Kitty &#150 <?php 
+							echo implode($picResults[7]);
+						 ?></h4>
+					</div>
+					<div class="col-sm-3">
+						<span class="author">oppenheimer alksjdflajsdlfajsdlfkjasldfkjalskd
+						</span>
+						
+					</div>
+					<div class="col-sm-3">
+						<img class="author" src="images/authors/oppenheimer.jpg" alt="oppenheimer" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="images/catNine.jpg" alt="Sir meowmeow?" />
+						<h4>Book Kitty &#150 <?php 
+							echo implode($picResults[8]);
+						 ?></h4>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="row">
