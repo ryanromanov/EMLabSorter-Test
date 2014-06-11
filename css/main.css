@@ -1,3 +1,29 @@
+/* Fonts */
+
+@font-face {
+font-family: Raleway-Light;
+src: url(../faces/Raleway-Light.otf);
+}
+@font-face {
+font-family: Raleway-ExtraLight;
+src: url(../faces/Raleway-ExtraLight.otf);
+}
+@font-face {
+font-family: GillSans-Light;
+src: url(../faces/GillSans-Light.ttf);
+}
+@font-face {
+font-family: HelveticaNeue-UltraLight;
+src: url(../faces/HelveticaNeueUltraLight.ttf);
+}
+@font-face {
+font-family: HelveticaNeue-Light;
+src: url(../faces/HelveticaNeueLight.ttf);
+}
+@font-face {
+font-family: HelveticaNeue-Thin;
+src: url(../faces/HelveticaNeueThin.ttf);
+}
 /* Basic Customization */
 
 a:link {
@@ -18,7 +44,7 @@ a:visited {
 	color: rgba(255, 255, 255, 1)!important;
 	font-weight: 100;
 	font-size: 3em;
-	font-family: "Gill Sans";	
+	font-family: "GillSans-Light";	
 }
 	.nav.navbar-nav {
 		float: right;
@@ -26,9 +52,8 @@ a:visited {
 		div.collapse li a,
 		div.collapsing li a {
 			font-variant: normal;
-			font-weight: 100;
 			font-size: 1.3em;
-			font-family: "Helvetica Neue";
+			font-family: "HelveticaNeue-UltraLight", sans-serif;
 		}
 		div.collapsing li a,
 		div.navbar-collapse.collapse.in li a {

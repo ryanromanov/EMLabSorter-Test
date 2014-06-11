@@ -18,11 +18,24 @@
 <!doctype html>
 <html>
 <head>
+	<meta charset="UTF-8" />
 	<title>Sorter</title>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css" />
-	
 	<style>
+		@media (max-width: 767px) {
+			div.col-sm-12 div.row {
+				border-bottom: 1px solid rgba(166, 166, 166, .75);
+				padding-bottom: 4%;
+				padding-top: 3%;
+			}
+			img.author {
+				float: right;
+			}
+			div.col-sm-2 h4 {
+				margin-top: 3% !important;
+			}
+		}
 		img {
 			display: block;
 			height: auto;
@@ -30,22 +43,23 @@
 		}
 		div.col-sm-6,
 		div.col-xs-3,
-		div.col-xs-2,
+		div.col-sm-2,
 		div.col-sm-7 {
 			padding-left: 0px;
 			padding-right: 0px;
 		}
-		div.col-xs-2 {
+		div.col-sm-2 {
 			padding: 0% 2%;
+			font-weight: 300;
 		}
-			div.col-xs-2 h4 {
+			div.col-sm-2 h4 {
 				margin-top: 0%;
+				font-weight: 300;
 			}
 		h4 {
 			text-align: center;
-			font-weight: 300;
-			font-family: "Hevetica Neue";
-			margin-top: 5px;
+			font-size: 1.7em;
+			font-family: "Raleway-ExtraLight";
 		}
 		.herro {
 			margin-bottom: 1%;
@@ -53,8 +67,9 @@
 		img.author {
 			width: 100%;
 			height: auto;
+		}
+		.col-xs-3 {
 			float: right;
-			
 		}
 		.container-fluid .row .row {
 			margin-left: 0px;
@@ -66,11 +81,15 @@
 			padding-bottom: 30px!important;
 			margin-bottom: 1%;
 		}
+			.jumbotron h4 {
+				font-family: "HelveticaNeue-Thin";
+			}
+		p {
+			font-size: 1em;
+			font-family: "HelveticaNeue-Light";
+		}
 	</style>
-	
-		
 </head>
-
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
@@ -102,7 +121,7 @@
 					<div class="col-sm-7">
 						<img src="images/catOne.jpg" alt="cat" />
 					</div>
-					<div class="col-xs-2">
+					<div class="col-sm-2">
 						<h4>Orange Kitty &#150 <?php 
 							echo implode($picResults[0]);
 						 ?>	
@@ -122,7 +141,7 @@
 					<div class="col-sm-7">
 						<img src="images/catTwo.jpg" alt="catcat" />
 					</div>
-					<div class="col-xs-2">
+					<div class="col-sm-2">
 						<h4>Grey Kitty &#150 <?php 
 							echo implode($picResults[1]);
 						 ?>
@@ -143,7 +162,7 @@
 					<div class="col-sm-7">
 						<img src="images/catThree.jpg" alt="catcatcat" />
 					</div>
-					<div class="col-xs-2">
+					<div class="col-sm-2">
 						<h4>Tabby-in-da-box &#150 <?php 
 							echo implode($picResults[2]);
 						 ?>
@@ -163,7 +182,7 @@
 					<div class="col-sm-7">
 						<img src="images/catFour.jpg" alt="meow?" />
 					</div>
-					<div class="col-xs-2">
+					<div class="col-sm-2">
 						<h4>Me So Happy Kitty &#150 <?php 
 							echo implode($picResults[3]);
 						 ?>
@@ -184,7 +203,7 @@
 					<div class="col-sm-7">
 						<img src="images/catFive.jpg" alt="meow?" />
 					</div>
-					<div class="col-xs-2">
+					<div class="col-sm-2">
 						<h4>Necklace Kitty &#150 <?php 
 							echo implode($picResults[4]);
 						 ?>
@@ -204,7 +223,7 @@
 					<div class="col-sm-7">
 						<img src="images/catSix.jpg" alt="meow?" />
 					</div>
-					<div class="col-xs-2">
+					<div class="col-sm-2">
 						<h4>Albino-Mose Kitty &#150 <?php 
 							echo implode($picResults[5]);
 						 ?>
@@ -224,7 +243,7 @@
 					<div class="col-sm-7">
 						<img src="images/catSeven.jpg" alt="meowmeow?" />
 					</div>
-					<div class="col-xs-2">
+					<div class="col-sm-2">
 						<h4>Bread Kitty &#150 <?php 
 							echo implode($picResults[6]);
 						 ?></h4>
@@ -244,7 +263,7 @@
 					<div class="col-sm-7">
 						<img src="images/catEight.jpg" alt="meowmeow?" />
 					</div>
-					<div class="col-xs-2">
+					<div class="col-sm-2">
 						<h4>Fierce Kitty &#150 <?php 
 							echo implode($picResults[7]);
 						 ?></h4>
@@ -263,7 +282,7 @@
 					<div class="col-sm-7">
 						<img src="images/catNine.jpg" alt="Sir meowmeow?" />
 					</div>
-					<div class="col-xs-2">
+					<div class="col-sm-2">
 						<h4>Book Kitty &#150 <?php 
 							echo implode($picResults[8]);
 						 ?></h4>

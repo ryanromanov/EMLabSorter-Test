@@ -8,7 +8,14 @@
 	<link rel="stylesheet" href="css/main.css" />
 	
 	<style>
-		
+		p {
+			font-size: 1.2em;
+			font-family: "Raleway-Light";
+		}
+		.descrip {
+			font-size: 1em;
+			font-family: "HelveticaNeue-Light";
+		}
 		div.col-sm-4 {
 			padding-left: 0px;
 			padding-right: 0px;
@@ -19,10 +26,6 @@
 		.row.middle {
 			margin: 0 auto;
 		}
-		
-		div.row.bottom {
-			margin-top: 30px;
-		}
 		div.col-sm-10.col-sm-offset-1.push-left {
 			margin-left: 10%;
 		}
@@ -30,14 +33,15 @@
 			border-radius: 0px;
 			border-color: rgba(120, 120, 120, .75);
 		}
-			li div.thumbnail p,
-			.jumbotron h4 {
-				font-weight: 300;
-			}
-		
+		.jumbotron {
+			padding-top: 80px;
+			padding-bottom: 30px!important;
+			margin-bottom: 1%;
+		}
 		.jumbotron h4 {
-			font-size: 1.3em;
+			font-size: 1.7em;
 			text-align: center;
+			font-family: "HelveticaNeue-Thin";
 		}
 		.push-down {
 			margin-top: 50px;
@@ -77,7 +81,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="jumbotron push-down">
+	<div class="jumbotron">
 		<h4>
 		Select up to 10 images for submission to UPCI
 		</h4>
@@ -87,7 +91,7 @@
 			<div class="col-sm-10 col-sm-offset-1 push-left">
 				<form action="process.php" role="form" method="post" id="picSubmission" name="emailSubmit" onsubmit="return validateEmail()">
 					<select class="image-picker limit_callback" id="container" data-limit="10" multiple="multiple" name="picSelect[]" >
-					  <option data-img-src="images/catOne.jpg" value='1'><h4>Orange Kitty by CatzRuz</h4></option>
+					  <option data-img-src="images/catOne.jpg" value='1'>Orange Kitty by CatzRuz</option>
 					  <option data-img-src="images/catTwo.jpg" value='2'>Grey Kitty</option>
 					  <option data-img-src='images/catThree.jpg' value='3'>Tabby-in-da-box</option>
 					  <option data-img-src='images/catFour.jpg' value='4'>Me So Happy Kitty</option>
