@@ -59,7 +59,7 @@
 		h4 {
 			text-align: center;
 			font-size: 1.7em;
-			font-family: "Raleway-ExtraLight";
+			font-family: "Chalet-ParisNineteenSixty";
 		}
 		.herro {
 			margin-bottom: 1%;
@@ -82,11 +82,11 @@
 			margin-bottom: 1%;
 		}
 			.jumbotron h4 {
-				font-family: "HelveticaNeue-Thin";
+				font-family: "Chalet-ParisNineteenSixty";
 			}
 		p {
-			font-size: 1em;
-			font-family: "HelveticaNeue-Light";
+			font-size: 1.1em;
+			font-family: "ProximaNova-Light";
 		}
 	</style>
 </head>
@@ -100,7 +100,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html">UPCI <span class="sm-caps">photo contest</span></a>
+				<a class="navbar-brand" href="index.html">UPCI <span class="small">photo contest</span></a>
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav sm-caps">
