@@ -1,6 +1,6 @@
 <?php
 header( "Refresh:2; url=http://localhost/EMLabSorter-Test/results.php", true, 303);
-$con=mysqli_connect("localhost","root", "passw0rd", "cbiTest");
+$con=mysqli_connect("localhost","root", "", "cbiTest");
  //Check Connection
 if (mysqli_connect_errno($con)) {
 	echo mysqli_connect_error() . "Connection Failed! You've made a huge mistake..."; 
